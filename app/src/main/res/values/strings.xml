@@ -1,3 +1,123 @@
 <resources>
-    <string name="app_name">eilidh_assign3</string>
+    <string name="app_name">30 Day Photography Challenge</string>
+
+    <string name="challenge_day1">Day 1: </string>
+    <string name="name_day1">Self Portrait</string>
+    <string name="desc_day1">Time to turn the camera on yourself! Get creative with reflections, shadows, or classic selfies!</string>
+
+    <string name="challenge_day2">Day 2: </string>
+    <string name="name_day2">Clouds</string>
+    <string name="desc_day2">Fluffy, moody, dramatic - capture the sky\'s ever-changing artwork.</string>
+
+    <string name="challenge_day3">Day 3: </string>
+    <string name="name_day3">Shadow</string>
+    <string name="desc_day3">Light creates magic! Find an interesting shadow and make it the star of your shot</string>
+
+    <string name="challenge_day4">Day 4: </string>
+    <string name="name_day4">Water</string>
+    <string name="desc_day4">Ripples, waves, raindrops - snap a moment where water plays the lead.</string>
+
+    <string name="challenge_day5">Day 5: </string>
+    <string name="name_day5">Something Red</string>
+    <string name="desc_day5">Find a pop of red in your world and make it stand out!</string>
+
+    <string name="challenge_day6">Day 6: </string>
+    <string name="name_day6">Childhood Memory</string>
+    <string name="desc_day6">Recreate or capture something that brings back nostalgic vibes!</string>
+
+    <string name="challenge_day7">Day 7: </string>
+    <string name="name_day7">Sunset</string>
+    <string name="desc_day7">Golden hour magic! Chase the colors and capture the perfect evening glow.</string>
+
+    <string name="challenge_day8">Day 8: </string>
+    <string name="name_day8">Flowers</string>
+    <string name="desc_day8">Delicate, wild, or in full bloom - capture nature\'s most photogenic stars.</string>
+
+    <string name="challenge_day9">Day 9: </string>
+    <string name="name_day9">Your Hobby</string>
+    <string name="desc_day9">Show off what you love to do! Whether it\'s painting, gaming, or baking - snap away!</string>
+
+    <string name="challenge_day10">Day 10: </string>
+    <string name="name_day10">Something Orange</string>
+    <string name="desc_day10">From sunsets to street signs, hunt down a bold burst of orange!</string>
+
+    <string name="challenge_day11">Day 11: </string>
+    <string name="name_day11">Your Favourite Place</string>
+    <string name="desc_day11">Share a spot that brings you peace, joy, or inspiration!</string>
+
+    <string name="challenge_day12">Day 12: </string>
+    <string name="name_day12">Your Current Outfit</string>
+    <string name="desc_day12">OOTD! Snap a photo of your look, whether it\'s comfy or runway-ready!</string>
+
+    <string name="challenge_day13">Day 13: </string>
+    <string name="name_day13">Landscape</string>
+    <string name="desc_day13">Capture the world\'s natural beauty - mountains, beaches, or cityscapes!</string>
+
+    <string name="challenge_day14">Day 14: </string>
+    <string name="name_day14">Something Yellow</string>
+    <string name="desc_day14">A little sunshine in your frame! Find something bright and cheerful!</string>
+
+    <string name="challenge_day15">Day 15: </string>
+    <string name="name_day15">Eyes</string>
+    <string name="desc_day15">The windows to the soul - zoom in on expressive, colorful, or unique eyes.</string>
+
+    <string name="challenge_day16">Day 16: </string>
+    <string name="name_day16">Black and White</string>
+    <string name="desc_day16">Strip away the color and let the contrast tell the story.</string>
+
+    <string name="challenge_day17">Day 17: </string>
+    <string name="name_day17">Close-up</string>
+    <string name="desc_day17">Get up close and personal! Find textures, details, or tiny worlds to explore!</string>
+
+    <string name="challenge_day18">Day 18: </string>
+    <string name="name_day18">Something Green</string>
+    <string name="desc_day18">Nature, neon, or a pop of emerald - green is everywhere, capture some from your life!</string>
+
+    <string name="challenge_day19">Day 19: </string>
+    <string name="name_day19">Someone you Love</string>
+    <string name="desc_day19">Capture a meaningful moment with a person (or pet) you adore!</string>
+
+    <string name="challenge_day20">Day 20: </string>
+    <string name="name_day20">Cannot Live Without</string>
+    <string name="desc_day20">What\'s essential in your life? Coffee, books, music? Show it off!</string>
+
+    <string name="challenge_day21">Day 21: </string>
+    <string name="name_day21">Patterns</string>
+    <string name="desc_day21">Stripes, spirals, or grids - find repetition in your surroundings.</string>
+
+    <string name="challenge_day22">Day 22: </string>
+    <string name="name_day22">Bokeh</string>
+    <string name="desc_day22">Soft, dreamy lights - blue the background and make your subject shine!</string>
+
+    <string name="challenge_day23">Day 23: </string>
+    <string name="name_day23">Today\'s Weather</string>
+    <string name="desc_day23">Rain or shine, document the mood of the day!</string>
+
+    <string name="challenge_day24">Day 24: </string>
+    <string name="name_day24">In Motion</string>
+    <string name="desc_day24">Freeze a moment in time or embrace the blur of the moment.</string>
+
+    <string name="challenge_day25">Day 25: </string>
+    <string name="name_day25">Something Blue</string>
+    <string name="desc_day25">A cool-toned treasure hunt - seek out something beautifully blue.</string>
+
+    <string name="challenge_day26">Day 26: </string>
+    <string name="name_day26">Silhouette</string>
+    <string name="desc_day26">Create a striking outline against the light for a dramatic effect.</string>
+
+    <string name="challenge_day27">Day 27: </string>
+    <string name="name_day27">Candid Photo</string>
+    <string name="desc_day27">Capture a natural, unposed moment full of life and emotion!</string>
+
+    <string name="challenge_day28">Day 28: </string>
+    <string name="name_day28">From a Distance</string>
+    <string name="desc_day28">Show perspective by capturing something far away!</string>
+
+    <string name="challenge_day29">Day 29: </string>
+    <string name="name_day29">Animal</string>
+    <string name="desc_day29">Furry, feathery, or scaly - snap a creature in its element!</string>
+
+    <string name="challenge_day30">Day 30: </string>
+    <string name="name_day30">Something Purple</string>
+    <string name="desc_day30">Find this regal color in nature, fashion, or everyday life!</string>
 </resources>
