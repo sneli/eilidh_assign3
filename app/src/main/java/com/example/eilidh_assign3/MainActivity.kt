@@ -7,13 +7,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,6 +47,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.eilidh_assign3.data.Challenge
 import com.example.eilidh_assign3.data.challenges
 import com.example.eilidh_assign3.ui.theme.Eilidh_assign3Theme
@@ -67,7 +74,14 @@ fun ChallengeAppBar(){
             ){
                 Icon(
                     imageVector = Icons.Default.AccountBox,
-                    contentDescription = null
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(dimensionResource(R.dimen.icon_size))
+                        .padding(end = dimensionResource(R.dimen.padding_small))
+                )
+                Text(
+                    text = "30 Day Photography Challenge",
+                    style = MaterialTheme.typography.displayMedium
                 )
             }
         }
@@ -84,7 +98,7 @@ fun ChallengeApp() {
             items(challenges){
                 ChallengeItem(
                     challenge = it,
-                    modifier = Modifier
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
                 )
             }
         }
@@ -98,8 +112,8 @@ fun ChallengeItem(
 ) {
     var expanded by remember { mutableStateOf(false) }
     val color by animateColorAsState(
-        targetValue = if(expanded) MaterialTheme.colorScheme.onPrimary
-                      else MaterialTheme.colorScheme.secondaryContainer
+        targetValue = if(expanded) MaterialTheme.colorScheme.surface
+                      else MaterialTheme.colorScheme.errorContainer
     )
 
     Card(
@@ -108,6 +122,12 @@ fun ChallengeItem(
         Column(
             modifier = Modifier
                 .background(color = color)
+                .animateContentSize(
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioNoBouncy,
+                        stiffness = Spring.StiffnessLow
+                    )
+                )
         ){
             Row(modifier = modifier.fillMaxWidth()){
                 ChallengeInformation(
@@ -124,7 +144,10 @@ fun ChallengeItem(
                 ChallengeDesc(
                     challenge.imageResourceId,
                     challenge.chlngeDesc,
-                    modifier = Modifier
+                    modifier = Modifier.padding(
+                        end = dimensionResource(R.dimen.padding_small),
+                        bottom = dimensionResource(R.dimen.padding_medium)
+                    )
                 )
             }
         }
@@ -138,23 +161,32 @@ fun ChallengeDesc(
     modifier: Modifier = Modifier
 ){
     Row(
-        modifier = Modifier
+        modifier = modifier
     ){
         Image(
             modifier = Modifier
                 .size(dimensionResource(R.dimen.image_size))
-                .padding(dimensionResource(R.dimen.padding_small)),
+                .padding(
+                    start = dimensionResource(R.dimen.padding_small),
+                    top = dimensionResource(R.dimen.padding_small),
+                    bottom = dimensionResource(R.dimen.padding_small),
+                    end = 0.dp
+                ),
             painter = painterResource(chlngeImg),
             contentDescription = null
         )
         Column(
-            modifier = Modifier
+            modifier = modifier
         ){
             Text(
-                text = "Challenge Description"
+                text = "Challenge Description:",
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
             )
             Text(
-                text = stringResource(chlngeDesc)
+                text = stringResource(chlngeDesc),
+                style = MaterialTheme.typography.bodySmall,
+                modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
             )
         }
     }
@@ -181,12 +213,15 @@ fun ChallengeInformation(
     @StringRes chlngeDay: Int,
     @StringRes chlngeName: Int
 ){
-    Row(){
+    Column(){
         Text(
-            text = stringResource(chlngeDay)
+            text = stringResource(chlngeDay),
+            style = MaterialTheme.typography.headlineSmall
         )
         Text(
-            text = stringResource(chlngeName)
+            text = stringResource(chlngeName),
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_medium))
         )
     }
 }
